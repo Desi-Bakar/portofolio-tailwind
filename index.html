@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<header class="bg-teal-600 text-white py-6 shadow top-0 left-0 w-full z-50">
+    <div class="container mx-auto px-6">
+        <h1 class="text-5xl font-bold">My Portfolio</h1>
+        <nav class="hidden md:flex space-x-8 mt-4">
+            <a href="#about" class="hover:underline">About Me</a>
+            <a href="#edu" class="hover:underline">My Education</a>
+            <a href="#skill" class="hover:underline">My Skill</a>
+            <a href="#project" class="hover:underline">My Project</a>
+        </nav>
+        <!-- Button Hamburger -->
+        <button id="hamburgerButton" class="absolute top-6 right-6 md:hidden flex items-center p-2 focus:outline-none">
+            <img src="./src/assets/menu-burger.png" class="h-6 w-6" alt="Menu">
+        </button>
+    </div>
+</header>
+
+
+<div id="mobileMenu" class="hidden fixed top-0 left-0 right-0 bottom-0 z-10 bg-teal-600 shadow-lg">
+    <div class="py-4 px-4">
+        <div class="flex justify-between items-center">
+            <h1 class="text-5xl text-white font-bold">My Portfolio</h1>
+            <button id="closeButton" class="focus:outline-none">
+                <img src="./src/assets/cross-small.png" class="h-6 w-6" alt="Close Menu">
+            </button>
+        </div>
+    </div>
+    <div class="py-4 px-4">
+        <!-- Menu items -->
+        <div class="flex flex-col space-y-4">
+            <a href="index.html" class="text-white text-lg hover:underline">Home</a>
+            <a href="about.html" class="text-white text-lg hover:underline">About Me</a>
+            <a href="edu.html" class="text-white text-lg hover:underline">My Education</a>
+            <a href="skill.html" class="text-white text-lg hover:underline">My Skill</a>
+            <a href="project.html" class="text-white text-lg hover:underline">My Project</a>
+        </div>
+        <p class="text-center text-white mt-4">&copy; 2025 My Portfolio. Desi Ratnasari</p>
+    </div>
+</div>
+
+
+<script>
+const hamburgerButton = document.getElementById('hamburgerButton');
+const mobileMenu = document.getElementById('mobileMenu');
+const closeButton = document.getElementById('closeButton');
+const icon = document.getElementById('icon');
+const websiteIcon = document.getElementById('websiteIcon');
+
+hamburgerButton.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
+  icon.classList.toggle('hidden');
+  websiteIcon.classList.toggle('hidden');
+});
+
+closeButton.addEventListener('click', () => {
+  mobileMenu.classList.add('hidden');
+  icon.classList.remove('hidden'); 
+  websiteIcon.classList.add('hidden');
+});
+</script>
+
+    <section id="about" class="py-12 bg-gray-200 bg-center scroll-mt-24">
+        <div class="container mx-auto px-4 text-black text-center">
+            <!-- Tambahkan flexbox untuk memusatkan elemen -->
+            <div class="flex flex-col items-center">
+                <img src="./src/assets/Cye.png" alt="Desi Bakar" 
+                    class="w-32 h-32 md:w-60 md:h-60 object-cover rounded-full shadow-white mb-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-500 duration-150 mt-8 group md:mx-auto mx-4 border-4 border-white">
+            </div>
+            <h2 class="text-5xl font-bold mb-2">About Me</h2>
+                <h2 class="text-xl text-teal-600 mb-4">Desi Ratnasari | Design Grafis</h2>
+                <p class="text-xl max-w-2xl mx-auto mb-8">Saya adalah seorang desainer grafis yang memiliki passion dalam menciptakan karya visual yang menarik dan efektif. Dengan pengalaman dalam berbagai bidang desain, mulai dari desain branding, materi promosi, hingga desain digital, saya selalu berusaha memberikan solusi kreatif yang dapat memperkuat pesan yang ingin disampaikan.</p>
+            </div>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="mt-8 flex justify-center gap-4">
+            <a href="https://www.facebook.com/DesNurBak" target="_blank" class="text-teal-600 hover:text-gray-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.41c0-3.1 1.893-4.788 4.657-4.788 1.324 0 2.462.099 2.794.143v3.24h-1.918c-1.504 0-1.794.715-1.794 1.762v2.31h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.325-.593 1.325-1.324V1.325C24 .593 23.407 0 22.675 0z"/>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/desy_bakar" target="_blank" class="text-teal-600 hover:text-gray-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 1.5a4.26 4.26 0 0 0-4.25 4.25v8.5a4.26 4.26 0 0 0 4.25 4.25h8.5a4.26 4.26 0 0 0 4.25-4.25v-8.5A4.26 4.26 0 0 0 16.25 3.5h-8.5ZM18 5.75a1 1 0 1 1 0 2 1 1 0 0 1 0-2ZM12 7.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm0 1.5a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/>
+                </svg>
+            </a>
+            <a href="https://www.tiktok.com/@desi_bakar" target="_blank" class="text-teal-600 hover:text-gray-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0c1.885 0 3.635.684 5.004 1.822C17.799.715 19.775 0 21.896 0H24v6.469c0 .994-.263 1.905-.724 2.704a6.486 6.486 0 0 1-1.754 2.023A7.502 7.502 0 0 1 15.6 15a7.499 7.499 0 0 1-7.499-7.5V.001h3.9v7.499c0 2.074 1.686 3.759 3.75 3.759s3.75-1.685 3.75-3.759V.002ZM.001 18.001v6h6v-6H.001Z"/>
+                </svg>
+            </a>
+            <a href="https://wa.me/+6281285234904" target="_blank" class="text-teal-600 hover:text-gray-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.523 3.471a11.863 11.863 0 0 0-17.046 0A11.947 11.947 0 0 0 0 12c0 2.204.623 4.365 1.804 6.231L0 24l5.84-1.783a11.95 11.95 0 0 0 6.16 1.733 11.946 11.946 0 0 0 8.473-3.515 11.865 11.865 0 0 0 0-17.046ZM12 21.89a10.065 10.065 0 0 1-5.187-1.463l-.37-.223-3.462 1.06.857-3.336-.24-.388a10.078 10.078 0 0 1 13.058-14.772A10.086 10.086 0 0 1 12 21.89Zm5.644-7.878c-.294-.148-1.739-.86-2.008-.955-.27-.095-.466-.148-.662.15s-.759.954-.93 1.15-.345.223-.639.074a8.105 8.105 0 0 1-2.422-1.491 8.07 8.07 0 0 1-1.486-2.373c-.158-.295-.017-.455.12-.602.124-.123.295-.32.443-.48.147-.16.196-.27.294-.444.098-.173.049-.326-.025-.477-.074-.148-.66-1.587-.904-2.18-.24-.582-.482-.502-.662-.502-.17 0-.372-.016-.572-.016-.199 0-.522.074-.791.371-.27.296-1.045 1.021-1.045 2.495 0 1.473 1.072 2.897 1.222 3.098.149.2 2.11 3.358 5.142 4.709 3.032 1.351 3.275.9 3.865.822.59-.075 1.937-.775 2.214-1.52.277-.745.277-1.396.197-1.523-.082-.126-.272-.199-.566-.347Z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <section id="edu" class="py-12 bg-gray-300 scroll-mt-24">
+        <div class="container mx-auto px-4 text-left">
+            <h2 class="text-5xl font-bold mb-10 text-teal-600 text-center">My Education</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+                <div class="flex flex-col items-center bg-teal-600 p-6 shadow rounded-lg">
+                    <img src="./src/assets/graduation-cap.png" alt="CorelDraw" class="w-20 h-20 object-cover mb-4">
+                    <div>
+                        <h3 class="text-sm font-medium text-white text-center">Kursus Ms.Office - Indragiri Hilir - Riau</h3>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center bg-white p-6 shadow rounded-lg">
+                    <img src="./src/assets/graduation.png" alt="Canva" class="w-20 h-20 object-cover mb-4">
+                    <div>
+                        <h3 class="text-sm font-medium text-center">MTsN 1 Enok - Indragiri Hilir - Riau </h3>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center bg-teal-600 p-6 shadow rounded-lg">
+                    <img src="./src/assets/graduation-cap.png" alt="Office" class="w-20 h-20 object-cover mb-4">
+                    <div>
+                        <h3 class="text-sm font-medium text-white text-center">SMAN 1 Enok - Indragiri Hilir - Riau</h3>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center bg-white p-6 shadow rounded-lg">
+                    <img src="./src/assets/graduation.png" alt="Office" class="w-20 h-20 object-cover mb-4">
+                    <div>
+                        <h3 class="text-sm font-medium text-center">D3 Teknik Informatika - AMIK Mapan Tangerang</h3>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center bg-teal-600 p-6 shadow rounded-lg">
+                    <img src="./src/assets/graduation-cap.png" alt="Office" class="w-20 h-20 object-cover mb-4">
+                    <div>
+                        <h3 class="text-sm font-medium text-white text-center">S1 Teknik Informatika - STMIK Masa Depan</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="skill" class="py-12 bg-gray-200 scroll-mt-24">
+        <div class="container mx-auto px-4 text-left">
+            <h2 class="text-5xl font-bold mb-10 text-teal-600 text-center">My Skill</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
+                <div class="flex flex-col md:flex-row items-center bg-white p-6 shadow rounded-lg">
+                    <img src="./src/assets/corel (2).png" alt="CorelDraw" class="w-32 h-32 md:w-40 md:h-40 object-cover mb-4 md:mb-0 md:mr-6">
+                    <div>
+                        <h3 class="text-xl font-semibold">CorelDraw</h3>
+                        <p class="text-gray-600">Saya memiliki ketertarikan yang mendalam pada dunia desain grafis, khususnya dalam penggunaan CorelDRAW. Dengan keahlian yang saya miliki dalam CorelDRAW, saya mampu menciptakan berbagai desain kreatif, mulai dari poster, spanduk, hingga ilustrasi yang detail. </p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center bg-white p-6 shadow rounded-lg">
+                    <img src="./src/assets/palette.png" alt="Canva" class="w-32 h-32 md:w-40 md:h-40 object-cover mb-4 md:mb-0 md:mr-6">
+                    <div>
+                        <h3 class="text-xl font-semibold">Canva</h3>
+                        <p class="text-gray-600">Saya memiliki minat dan ketertarikan yang besar dalam belajar dan mengembangkan keterampilan menggunakan Canva. Dengan kreativitas dan ketelitian, saya mampu menciptakan desain visual yang menarik, baik untuk kebutuhan pribadi maupun profesional. </p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center bg-white p-6 shadow rounded-lg">
+                    <img src="./src/assets/office (1).png" alt="Office" class="w-32 h-32 md:w-40 md:h-40 object-cover mb-4 md:mb-0 md:mr-6">
+                    <div>
+                        <h3 class="text-xl font-semibold">Ms.Office</h3>
+                        <p class="text-gray-600">Saya memiliki keahlian dan minat dalam Microsoft Office, dengan pengalaman luas dalam mengedit dokumen, menyusun presentasi profesional, serta mengelola dan menganalisis data secara efektif.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center bg-white p-6 shadow rounded-lg">
+                    <img src="./src/assets/social-media.png" alt="Office" class="w-32 h-32 md:w-40 md:h-40 object-cover mb-4 md:mb-0 md:mr-6">
+                    <div>
+                        <h3 class="text-xl font-semibold">Bisnis Digital</h3>
+                        <p class="text-gray-600">Saya menyukai dunia bisnis digital dan memiliki keahlian dalam mengelola strategi pemasaran online serta pengembangan konten digital untuk meningkatkan bisnis di platform digital.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+         
+    <section id="project" class="py-12 bg-teal-600 scroll-mt-24">      
+        <div class="container mx-auto px-4">
+            <h2 class="text-white text-5xl font-bold mb-10 text-center">My Project</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                    <img src="./src/assets/2.jpg" alt="Project 1" class="w-full">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold">SMAIT Asy Syukriyyah</h3>
+                        <p class="text-gray-600">Membuat spanduk yang menampilkan biodata para guru di SMAIT Asy Syukriyyah secara profesional dan menarik. Spanduk ini bertujuan untuk memperkenalkan guru kepada siswa, orang tua, dan tamu sekolah dengan tampilan visual yang informatif dan estetis.</p>
+                    </div>
+                </div>
+            
+                <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                    <img src="./src/assets/1 rgb.jpg" alt="Project 3" class="project-image">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold">Pondok Kurma</h3>
+                        <p class="text-gray-600">
+                            Membuat desain spanduk yang menarik, informatif, dan profesional untuk mendukung penjualan produk kurma Al Mabrur. Spanduk ini akan digunakan untuk menarik perhatian calon pembeli serta meningkatkan brand awareness.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                    <img src="./src/assets/c.png" alt="Project 2" class="w-full">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold">Tridinamika</h3>
+                        <p class="text-gray-600">Membuat desain label yang berfungsi sebagai peringatan pada produk perusahaan PT Tridinamika untuk menjaga keamanan barang selama proses pengiriman atau penyimpanan. Label ini diharapkan menjadi solusi visual yang mudah dipahami, menarik perhatian, dan sesuai dengan identitas perusahaan.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                    <img src="./src/assets/250cmx100cm.jpg" alt="Project 3" class="project-image">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold">Bakso Adi Putra</h3>
+                        <p class="text-gray-600">
+                            Membuat desain spanduk usaha bakso yang bertujuan menarik perhatian calon pelanggan. Spanduk ini dirancang dengan tampilan visual yang menarik, menggunakan warna-warna cerah yang menggugah selera, serta elemen grafis yang relevan, seperti gambar mangkuk bakso dengan kuah yang menggoda.
+                        </p>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </section>
+
+ 
+
+    <footer class="bg-teal-700 text-white py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <!-- Copyright -->
+            <p>&copy; 2025 My Portfolio. Desi Ratnasari</p>
+            
+           <!-- Tombol ke atas -->
+            <button 
+                onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+                 class="bg-teal-600 px-4 py-2 rounded hover:bg-teal-500 transition">
+                 <img src="./src/assets/inbox-out.png" alt="Ke Atas" class="w-6 h-6 mx-auto" />
+            </button>
+
+        </div>
+    </footer>
+    
+    
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<header class="bg-teal-600 text-white py-6 shadow top-0 left-0 w-full z-50">
+    <div class="container mx-auto px-6">
+        <h1 class="text-5xl font-bold">My Portfolio</h1>
+        <nav class="hidden md:flex space-x-8 mt-4">
+            <a href="#about" class="hover:underline">About Me</a>
+            <a href="#skill" class="hover:underline">My Skill</a>
+            <a href="#project" class="hover:underline">My Project</a>
+        </nav>
+        <!-- Button Hamburger -->
+        <button id="hamburgerButton" class="absolute top-6 right-6 md:hidden flex items-center p-2 focus:outline-none">
+            <img src="./src/assets/menu-burger.png" class="h-6 w-6" alt="Menu">
+        </button>
+    </div>
+</header>
+
+
+<div id="mobileMenu" class="hidden fixed top-0 left-0 right-0 bottom-0 z-10 bg-teal-600 shadow-lg">
+    <div class="py-4 px-4">
+        <div class="flex justify-between items-center">
+            <h1 class="text-5xl text-white font-bold">My Portfolio</h1>
+            <button id="closeButton" class="focus:outline-none">
+                <img src="./src/assets/cross-small.png" class="h-6 w-6" alt="Close Menu">
+            </button>
+        </div>
+    </div>
+    <div class="py-4 px-4">
+        <!-- Menu items -->
+        <div class="flex flex-col space-y-4">
+            <a href="index.html" class="text-white text-lg hover:underline">Home</a>
+            <a href="about.html" class="text-white text-lg hover:underline">About Me</a>
+            <a href="edu.html" class="text-white text-lg hover:underline">My Education</a>
+            <a href="skill.html" class="text-white text-lg hover:underline">My Skill</a>
+            <a href="project.html" class="text-white text-lg hover:underline">My Project</a>
+        </div>
+        <p class="text-center text-white mt-4">&copy; 2025 My Portfolio. Desi Ratnasari</p>
+    </div>
+</div>
+
+
+<script>
+const hamburgerButton = document.getElementById('hamburgerButton');
+const mobileMenu = document.getElementById('mobileMenu');
+const closeButton = document.getElementById('closeButton');
+const icon = document.getElementById('icon');
+const websiteIcon = document.getElementById('websiteIcon');
+
+hamburgerButton.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
+  icon.classList.toggle('hidden');
+  websiteIcon.classList.toggle('hidden');
+});
+
+closeButton.addEventListener('click', () => {
+  mobileMenu.classList.add('hidden');
+  icon.classList.remove('hidden'); 
+  websiteIcon.classList.add('hidden');
+});
+</script>
+
+        
+
+    <section id="skill" class="py-12 bg-gray-200 scroll-mt-24">
+        <div class="container mx-auto px-4 text-left">
+            <h2 class="text-5xl font-bold mb-10 text-teal-600 text-center">My Skill</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
+                <div class="flex flex-col md:flex-row items-center bg-white p-6 shadow rounded-lg">
+                    <img src="./src/assets/corel (2).png" alt="CorelDraw" class="w-32 h-32 md:w-40 md:h-40 object-cover mb-4 md:mb-0 md:mr-6">
+                    <div>
+                        <h3 class="text-xl font-semibold">CorelDraw</h3>
+                        <p class="text-gray-600">Saya memiliki ketertarikan yang mendalam pada dunia desain grafis, khususnya dalam penggunaan CorelDRAW. Dengan keahlian yang saya miliki dalam CorelDRAW, saya mampu menciptakan berbagai desain kreatif, mulai dari poster, spanduk, hingga ilustrasi yang detail. </p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center bg-white p-6 shadow rounded-lg">
+                    <img src="./src/assets/palette.png" alt="Canva" class="w-32 h-32 md:w-40 md:h-40 object-cover mb-4 md:mb-0 md:mr-6">
+                    <div>
+                        <h3 class="text-xl font-semibold">Canva</h3>
+                        <p class="text-gray-600">Saya memiliki minat dan ketertarikan yang besar dalam belajar dan mengembangkan keterampilan menggunakan Canva. Dengan kreativitas dan ketelitian, saya mampu menciptakan desain visual yang menarik, baik untuk kebutuhan pribadi maupun profesional. </p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center bg-white p-6 shadow rounded-lg">
+                    <img src="./src/assets/office (1).png" alt="Office" class="w-32 h-32 md:w-40 md:h-40 object-cover mb-4 md:mb-0 md:mr-6">
+                    <div>
+                        <h3 class="text-xl font-semibold">Ms.Office</h3>
+                        <p class="text-gray-600">Saya memiliki keahlian dan minat dalam Microsoft Office, dengan pengalaman luas dalam mengedit dokumen, menyusun presentasi profesional, serta mengelola dan menganalisis data secara efektif.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center bg-white p-6 shadow rounded-lg">
+                    <img src="./src/assets/social-media.png" alt="Office" class="w-32 h-32 md:w-40 md:h-40 object-cover mb-4 md:mb-0 md:mr-6">
+                    <div>
+                        <h3 class="text-xl font-semibold">Bisnis Digital</h3>
+                        <p class="text-gray-600">Saya menyukai dunia bisnis digital dan memiliki keahlian dalam mengelola strategi pemasaran online serta pengembangan konten digital untuk meningkatkan bisnis di platform digital.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+            
+    <footer class="bg-teal-700 text-white py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <!-- Copyright -->
+            <p>&copy; 2025 My Portfolio. Desi Ratnasari</p>
+            
+           <!-- Tombol ke atas -->
+            <button 
+                onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+                 class="bg-teal-600 px-4 py-2 rounded hover:bg-teal-500 transition">
+                 <img src="./src/assets/inbox-out.png" alt="Ke Atas" class="w-6 h-6 mx-auto" />
+            </button>
+
+        </div>
+    </footer>
+    
+    
+</body>
+</html>

@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "gatsby-starter-decap-cms": "github:decaporg/gatsby-starter-decap-cms"
   }
 }
